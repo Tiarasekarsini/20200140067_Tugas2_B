@@ -65,7 +65,17 @@ namespace _20200140067_Tugas2_B
                  "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-223','Paracetamol','Tablet','Keras',23000,'3 Karton', '2022-02-25', '2022-03-30' ,'KL-230')" +
                  "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-221','Amlodipine','Tablet','Keras',10000,'5 Karton', '2025-10-25', '2030-10-25','KL-303')" +
                  "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-234','Amoxicilin','Kapsul','Keras',26000,'2 Karton', '2019-09-07', '2026-09-07','KL-402')" +
-                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-243','Simvastatin','Tablet','Keras',7000,'1 Karton', '2022-08-05', '2027-08-05','KL-110')", con);
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-243','Simvastatin','Tablet','Keras',7000,'1 Karton', '2022-08-05', '2027-08-05','KL-110')"+
+                  "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-200','2020-01-21','5 Karton','10 Karton','KO-223','KS-102')" +
+                  "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-232','2020-03-22','2 Karton','5 Karton','KO-221','KS-110')" +
+                  "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-223','2020-10-20','3 Karton','3 Karton','KO-234','KS-209')" +
+                  "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-252','2021-08-18','4 Karton','6 Karton','KO-342','KS-389')" +
+                  "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-392','2021-11-20','7 Karton','2 Karton','KO-243','KS-500')" +
+                  "insert into Stock_Keluar (Kode_Keluar, Tanggal_Keluar, Jumlah_Keluar, Saldo_Masuk, Stock_Terbaru, Kode_Obat, Kode_Pembeli) values ('KK-001','2020-01-22','1 Lembar', 10000,'9 Karton','KO-221','KP-022')"+
+                  "insert into Stock_Keluar (Kode_Keluar, Tanggal_Keluar, Jumlah_Keluar, Saldo_Masuk, Stock_Terbaru, Kode_Obat, Kode_Pembeli) values ('KK-012','2020-03-23','5 Lembar', 35000,'7 Karton','KO-243','KP-231')" +
+                  "insert into Stock_Keluar (Kode_Keluar, Tanggal_Keluar, Jumlah_Keluar, Saldo_Masuk, Stock_Terbaru, Kode_Obat, Kode_Pembeli) values ('KK-201','2020-10-25','2 Lembar',52000,'2 Karton','KO-234','KP-343')" +
+                  "insert into Stock_Keluar (Kode_Keluar, Tanggal_Keluar, Jumlah_Keluar, Saldo_Masuk, Stock_Terbaru, Kode_Obat, Kode_Pembeli) values ('KK-221','2021-08-20','10 Lembar', 230000,'3 Karton','KO-223','KP-359')" +
+                  "insert into Stock_Keluar (Kode_Keluar, Tanggal_Keluar, Jumlah_Keluar, Saldo_Masuk, Stock_Terbaru, Kode_Obat, Kode_Pembeli) values ('KK-110','2021-01-22','3 botol', 105000,'5 Karton','KO-342','KP-698')", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Yeay!! Data berhasil ditambahkan!");
@@ -84,7 +94,7 @@ namespace _20200140067_Tugas2_B
         }
         static void Main(string[] args)
         {
-            //new Program().BuatTable();
+            new Program().BuatTable();
             new Program().IsiTabel();
         }
     }
