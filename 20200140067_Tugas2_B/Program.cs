@@ -19,8 +19,8 @@ namespace _20200140067_Tugas2_B
 
                 SqlCommand cm = new SqlCommand("create table Supplier (Kode_Supplier char(6) not null primary key, Nama_Supplier varchar(30) not null, No_Telpon char(12) not null, Alamat varchar (50))" +
                     "create table Pembeli (Kode_Pembeli char(6) not null primary key, Nama_Pembeli varchar(30) not null, Jenis_Kelamin char(1) CHECK (Jenis_Kelamin in ('L','P')), No_Telepon char(12), Alamat varchar(50))" +
-                    "create table Obat (Kode_Obat char(6) not null primary key, Merek_Obat varchar(30) not null, Jenis_Obat varchar(30) not null, Kategori_Obat varchar(10), Harga_Obat money, Stok_Obat varchar(30), Tanggal_Produksi date, Tanggal_Kadaluwarsa date, Kode_Pelayan char(6) foreign key references Pelayan_Apotek(Kode_Pelayan))" +
                     "create table Pelayan_Apotek (Kode_Pelayan char(6) not null primary key, Nama_Pelayan varchar(30) not null, Jenis_Kelamin char(1) CHECK(Jenis_Kelamin in ('L','P')))" +
+                    "create table Obat (Kode_Obat char(6) not null primary key, Merek_Obat varchar(30) not null, Jenis_Obat varchar(30) not null, Kategori_Obat varchar(10), Harga_Obat money, Stok_Obat varchar(30), Tanggal_Produksi date, Tanggal_Kadaluwarsa date, Kode_Pelayan char(6) foreign key references Pelayan_Apotek(Kode_Pelayan))" +
                     "create table Stock_Masuk (Kode_Masuk char(6) not null primary key, Tanggal_Masuk date not null, Jumlah_Masuk varchar(30) not null, Stock_terbaru varchar(30), Kode_Obat char(6) foreign key references Obat(Kode_Obat) not null, Kode_Supplier char(6) foreign key references Supplier(Kode_Supplier))" +
                     "create table Stock_Keluar(Kode_Keluar char(6) not null primary key, Tanggal_Keluar date not null, Jumlah_Keluar varchar(30) not null, Saldo_Masuk money, Stock_Terbaru varchar(30) not null, Kode_Obat char(6) foreign key references Obat(Kode_Obat) not null, Kode_Pembeli char(6) foreign key references Pembeli(Kode_Pembeli))", con);
                 cm.ExecuteNonQuery();
@@ -64,8 +64,8 @@ namespace _20200140067_Tugas2_B
                  "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-342','Ambroxol','Sirup','Keras',35000,'2 Karton', '2022-11-08' , '2025-11-08','KL-110')"+
                  "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-223','Paracetamol','Tablet','Keras',23000,'3 Karton', '2022-02-25', '2022-03-30' ,'KL-230')" +
                  "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-221','Amlodipine','Tablet','Keras',10000,'5 Karton', '2025-10-25', '2030-10-25','KL-303')" +
-                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-234','Amoxicilin','Kapsul','Keras',26000,'2 Karton', '2019-09-07', '2026-09-07','KL-402')" +
-                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-243','Simvastatin','Tablet','Keras',7000,'1 Karton', '2022-08-05', '2027-08-05','KL-110')"+
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-234','Amoxicilin','Kapsul','Keras',26000,'2 Karton', '2019-09-07', '2026-09-07','KL-403')" +
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-243','Simvastatin','Tablet','Keras',7000,'1 Karton', '2022-08-05', '2027-08-05','KL-103')"+
                   "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-200','2020-01-21','5 Karton','10 Karton','KO-223','KS-102')" +
                   "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-232','2020-03-22','2 Karton','5 Karton','KO-221','KS-110')" +
                   "insert into Stock_Masuk (Kode_Masuk, Tanggal_Masuk, Jumlah_Masuk, Stock_Terbaru, Kode_Obat, Kode_Supplier) values ('KM-223','2020-10-20','3 Karton','3 Karton','KO-234','KS-209')" +
@@ -94,7 +94,7 @@ namespace _20200140067_Tugas2_B
         }
         static void Main(string[] args)
         {
-            new Program().BuatTable();
+            //new Program().BuatTable();
             new Program().IsiTabel();
         }
     }
