@@ -59,8 +59,13 @@ namespace _20200140067_Tugas2_B
                  "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-022','Dadang Zaenudin','L','087234564321','Sumedang, Jawa Barat')"+
                  "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-231','Iroh Kusuma','P','085223345523','Majalengka, Jawa Barat')" +
                  "insert into Pembeli(Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values('KP-343', 'Hasyim', 'L', '085221666966', 'Cirebon, Jawa Barat')"+
-                  "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-359','Iin','P','083325644877','Kuningan, Jawa Barat')" +
-                  "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-698','Elin Hammida','P','085222000237','Indramayu, Jawa Barat')", con);
+                 "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-359','Iin','P','083325644877','Kuningan, Jawa Barat')" +
+                 "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-698','Elin Hammida','P','085222000237','Indramayu, Jawa Barat')" +
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-342','Ambroxol','Sirup','Keras',35000,'2 Karton', '2022-11-08' , '2025-11-08','KL-110')"+
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-223','Paracetamol','Tablet','Keras',23000,'3 Karton', '2022-02-25', '2022-03-30' ,'KL-230')" +
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-221','Amlodipine','Tablet','Keras',10000,'5 Karton', '2025-10-25', '2030-10-25','KL-303')" +
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-234','Amoxicilin','Kapsul','Keras',26000,'2 Karton', '2019-09-07', '2026-09-07','KL-402')" +
+                 "insert into Obat (Kode_Obat, Merek_Obat, Jenis_Obat, Kategori_Obat, Harga_Obat, Stok_Obat, Tanggal_Produksi, Tanggal_Kadaluwarsa, Kode_Pelayan) values ('KO-243','Simvastatin','Tablet','Keras',7000,'1 Karton', '2022-08-05', '2027-08-05','KL-110')", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Yeay!! Data berhasil ditambahkan!");
@@ -79,7 +84,7 @@ namespace _20200140067_Tugas2_B
         }
         static void Main(string[] args)
         {
-            new Program().BuatTable();
+            //new Program().BuatTable();
             new Program().IsiTabel();
         }
     }
