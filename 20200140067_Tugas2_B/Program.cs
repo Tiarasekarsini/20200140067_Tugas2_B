@@ -51,11 +51,16 @@ namespace _20200140067_Tugas2_B
                  "insert into Supplier(Kode_Supplier, Nama_Supplier, No_Telpon, Alamat) values('KS-209', 'PT. Kalbe', '088987765567', 'Jakarta Selatan')" +
                  "insert into Supplier (Kode_Supplier, Nama_Supplier, No_Telpon, Alamat) values ('KS-389','PT. Karunia Anugerah','089933422234','Surabaya,Jawa Timur')" +
                  "insert into Supplier (Kode_Supplier, Nama_Supplier, No_Telpon, Alamat) values ('KS-500','Zaqquera','087653269992','Semarang,Jawa Tengah')"+
-                    "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis Kelamin) values ('KL-110','Asep Saepudin','L')"+
-                    "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis Kelamin) values ('KL-110','Asep Saepudin','L')"+
-                    "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis Kelamin) values ('KL-110','Asep Saepudin','L')"+
-                    "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis Kelamin) values ('KL-110','Asep Saepudin','L')"+
-                    "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis Kelamin) values ('KL-110','Asep Saepudin','L')", con);
+                 "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis_Kelamin) values ('KL-110','Asep Saepudin','L')"+
+                 "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis_Kelamin) values ('KL-230','Rara','P')"+
+                 "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis_Kelamin) values ('KL-303','Nurrohmah','P')"+
+                 "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis_Kelamin) values ('KL-403','Dimas','L')"+
+                 "insert into Pelayan_Apotek (Kode_Pelayan, Nama_Pelayan, Jenis_Kelamin) values ('KL-103','Raina Gemilang','P')"+
+                 "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-022','Dadang Zaenudin','L','087234564321','Sumedang, Jawa Barat')"+
+                 "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-231','Iroh Kusuma','P','085223345523','Majalengka, Jawa Barat')" +
+                 "insert into Pembeli(Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values('KP-343', 'Hasyim', 'L', '085221666966', 'Cirebon, Jawa Barat')"+
+                  "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-359','Iin','P','083325644877','Kuningan, Jawa Barat')" +
+                  "insert into Pembeli (Kode_Pembeli, Nama_Pembeli, Jenis_Kelamin, No_Telepon, Alamat) values ('KP-698','Elin Hammida','P','085222000237','Indramayu, Jawa Barat')", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Yeay!! Data berhasil ditambahkan!");
@@ -74,7 +79,7 @@ namespace _20200140067_Tugas2_B
         }
         static void Main(string[] args)
         {
-            //new Program().BuatTable();
+            new Program().BuatTable();
             new Program().IsiTabel();
         }
     }
